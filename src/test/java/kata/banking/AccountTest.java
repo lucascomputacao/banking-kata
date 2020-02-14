@@ -6,9 +6,9 @@ package kata.banking;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class LibraryTest {
+class AccountTest {
     @Test void testSomeLibraryMethod() {
-        Library classUnderTest = new Library();
+        Account classUnderTest = new Account();
         assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
     }
 }

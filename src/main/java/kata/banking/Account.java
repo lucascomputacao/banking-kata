@@ -3,7 +3,7 @@
  */
 package kata.banking;
 
-public class Library {
+public class Account {
     public boolean someLibraryMethod() {
         return true;
     }
