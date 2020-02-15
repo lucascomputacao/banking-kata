@@ -38,7 +38,7 @@ public class Account {
 
     public void withDraw(Integer money) {
         if (moneyStored >= money) {
-            moneyStored += money;
+            moneyStored -= money;
             statementRegister(money);
         } else {
             log("You don't have this amount of money!");

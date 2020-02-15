@@ -58,4 +58,37 @@ class AccountTest {
         assert(statement.contains(expectedStatement));
         assertEquals(account.getMoneyStored(), sumString);
     }
+
+    @Test
+    public void withDrawShouldBeDoneCorrectly() {
+        // GIVEN
+        Account account = new Account();
+        account.deposit(100);
+
+        // WHEN
+        account.withDraw(100);
+
+        // THEN
+        assertEquals(account.getMoneyStored(), Integer.toString(0));
+    }
+
+    @Test
+    public void withDrawWithEnoughResources() {
+        //GIVEN
+        Account account = new Account();
+        account.deposit(100);
+        String dateFormated = account.getDateFormated();
+        String expectedStatement =
+                BASIC_STATEMENT_STRING +
+                        dateFormated + "        +100             100";
+
+        //WHEN
+        account.withDraw(200);
+        String statement = account.printStatement();
+
+        //THEN
+        assertEquals(account.getMoneyStored(), Integer.toString(100));
+        assert(statement.contains(expectedStatement));
+    }
+
 }
