@@ -3,8 +3,76 @@
  */
 package kata.banking;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+
 public class Account {
-    public boolean someLibraryMethod() {
-        return true;
+    ArrayList<String> bankStatementRegister = new ArrayList();
+    Integer moneyStored = 0;
+
+
+    public void deposit(Integer money) {
+        // deposita na conta
+        depositMoneyInAccount(money);
+        statementRegister(money);
+    }
+
+    private void depositMoneyInAccount(Integer money) {
+        moneyStored =+ money;
+    }
+
+    private String getDateFormated() {
+        Date date = Calendar.getInstance().getTime();
+        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        return dateFormat.format(date);
+    }
+
+    public void withDraw(Integer money) {
+
+    }
+
+    public String printStatement() {
+        // if bankStatementList is empty return empty string
+        if (!bankStatementRegister.isEmpty()) {
+            // Statement format:
+            // Date        Amount  Balance
+            //24.12.2015   +500      500
+            System.out.println("Date             Amount        Balance");
+            bankStatementRegister.forEach(System.out::println);
+        }
+        return "";
+    }
+
+    public String statementRegister(Integer depositMoney) {
+        // Statement format:
+        // Date        Amount  Balance
+        //24.12.2015   +500      500
+        String statement = getDateFormated();
+        statement += "        " + getMoneyPrefix(depositMoney) + "" + depositMoney;
+        statement += "             " + getBalance(depositMoney);
+        System.out.println("Saving New Statement: ");
+        System.out.println("Date             Amount        Balance\n" + statement);
+
+        bankStatementRegister.add(statement);
+        return statement;
+    }
+
+    private String getMoneyPrefix(Integer depositMoney) {
+        String prefixMoney = "";
+        if (depositMoney > 0)
+            prefixMoney = "+";
+        return prefixMoney;
+    }
+
+    public String getBalance(Integer depositMoney) {
+        Integer result = (moneyStored + depositMoney);
+        return result.toString();
+    }
+
+    public String getMoneyStored() {
+        return moneyStored.toString();
     }
 }

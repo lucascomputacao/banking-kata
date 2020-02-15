@@ -7,8 +7,47 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
-    @Test void testSomeLibraryMethod() {
-        Account classUnderTest = new Account();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+
+    @Test
+    public void shouldDepositAndStoreMoneyCorrectly() {
+        //GIVEN
+        Account account = new Account();
+        Integer money = 500;
+
+        //WHEN
+        account.deposit(money);
+
+        //THEN
+        assert(account.getMoneyStored().equals(money.toString()));
+    }
+
+    @Test
+    public void printStatementShouldBeEmptyStringWhenWeDontHaveMoneyInAccount() {
+        //GIVEN
+        Account account = new Account();
+
+        //WHEN
+        String printStatement = account.printStatement();
+
+        //THEN
+        assert(printStatement.equals(""));
+    }
+
+    @Test
+    public void printStatementShouldReturnNonEmptyStringWhenWeHaveSomeMoneyInAccount() {
+        //GIVEN
+        Account account = new Account();
+        Integer money = 500;
+        account.deposit(money);
+        Integer money2 = -100;
+        account.deposit(money2);
+
+        //WHEN
+        String statement = account.printStatement();
+
+        //THEN
+        assert(statement.contains(money.toString()));
+        assert(statement.contains(money2.toString()));
+        assert(account.getMoneyStored().equals(money + money2));
     }
 }
