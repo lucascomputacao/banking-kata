@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0cb5da5f-e97c-47ab-a497-ee41a7b4fb6e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/kata/banking/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kata/banking/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/kata/banking/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kata/banking/AccountTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1XoUFIRH6N5Kt4OkrcVBxeV0qZR" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager" selected="Gradle.AccountTest">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AccountTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;kata.banking.AccountTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AccountTest.depositTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;kata.banking.AccountTest.depositTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AccountTest.printStatementShouldBeEmptyStringWhenWeDontHaveMoneyInAccount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;kata.banking.AccountTest.printStatementShouldBeEmptyStringWhenWeDontHaveMoneyInAccount&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AccountTest.printStatementShouldBeNullWhenWeDontHaveMoneyInAccount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;kata.banking.AccountTest.printStatementShouldBeNullWhenWeDontHaveMoneyInAccount&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="AccountTest.printStatementShouldReturnNonEmptyStringWhenWeHaveSomeMoneyInAccount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;kata.banking.AccountTest.printStatementShouldReturnNonEmptyStringWhenWeHaveSomeMoneyInAccount&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="banking-kata" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="banking-kata" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.AccountTest" />
+        <item itemvalue="Gradle.AccountTest.printStatementShouldReturnNonEmptyStringWhenWeHaveSomeMoneyInAccount" />
+        <item itemvalue="Gradle.AccountTest.depositTest" />
+        <item itemvalue="Gradle.AccountTest.printStatementShouldBeEmptyStringWhenWeDontHaveMoneyInAccount" />
+        <item itemvalue="Gradle.AccountTest.printStatementShouldBeNullWhenWeDontHaveMoneyInAccount" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0cb5da5f-e97c-47ab-a497-ee41a7b4fb6e" name="Default Changelist" comment="" />
+      <created>1581711835943</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581711835943</updated>
+      <workItem from="1581711843720" duration="13997000" />
+    </task>
+    <task id="LOCAL-00001" summary="Creating class Account">
+      <created>1581712116484</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581712116485</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Starting Tests">
+      <created>1581742553265</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581742553265</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creating class Account" />
+    <MESSAGE value="Starting Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Starting Tests" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="251" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581712097654">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="251" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1581712097654" />
+    <state x="2299" y="267" key="#xdebugger.evaluate" timestamp="1581772942930">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state x="2299" y="267" key="#xdebugger.evaluate/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581772942930" />
+    <state x="483" y="174" key="#xdebugger.evaluate/0.23.1440.877@0.23.1440.877" timestamp="1581715370356" />
+    <state x="1979" y="84" key="CommitChangelistDialog2" timestamp="1581742552840">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1979" y="84" key="CommitChangelistDialog2/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581742552840" />
+    <state x="303" y="61" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1581712115666" />
+    <state width="1529" height="608" key="GridCell.Tab.0.bottom" timestamp="1581773482778">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state width="1558" height="241" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1581713932897" />
+    <state width="1529" height="608" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581773482778" />
+    <state width="1398" height="276" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1581715652686" />
+    <state width="1529" height="608" key="GridCell.Tab.0.center" timestamp="1581773482776">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state width="1558" height="241" key="GridCell.Tab.0.center/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1581713932896" />
+    <state width="1529" height="608" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581773482776" />
+    <state width="1398" height="276" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1581715652681" />
+    <state width="1529" height="608" key="GridCell.Tab.0.left" timestamp="1581773482775">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state width="1558" height="241" key="GridCell.Tab.0.left/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1581713932893" />
+    <state width="1529" height="608" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581773482775" />
+    <state width="1398" height="276" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1581715652677" />
+    <state width="1529" height="608" key="GridCell.Tab.0.right" timestamp="1581773482777">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state width="1558" height="241" key="GridCell.Tab.0.right/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1581713932896" />
+    <state width="1529" height="608" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581773482777" />
+    <state width="1398" height="276" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1581715652685" />
+    <state width="1529" height="459" key="GridCell.Tab.1.bottom" timestamp="1581772998230">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state width="1529" height="459" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581772998230" />
+    <state width="1398" height="276" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1581715652688" />
+    <state width="1529" height="459" key="GridCell.Tab.1.center" timestamp="1581772998229">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state width="1529" height="459" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581772998229" />
+    <state width="1398" height="276" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1581715652687" />
+    <state width="1529" height="459" key="GridCell.Tab.1.left" timestamp="1581772998228">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state width="1529" height="459" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581772998228" />
+    <state width="1398" height="276" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1581715652686" />
+    <state width="1529" height="459" key="GridCell.Tab.1.right" timestamp="1581772998229">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state width="1529" height="459" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581772998229" />
+    <state width="1398" height="276" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1581715652688" />
+    <state x="2014" y="471" key="Vcs.Push.Dialog.v2" timestamp="1581742555594">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state x="2014" y="471" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581742555594" />
+    <state x="291" y="66" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1581711974749">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="291" y="66" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1440.877@0.23.1440.877" timestamp="1581711974749" />
+    <state x="2175" y="374" key="extract.method.dialog" timestamp="1581742376722">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1991" y="220" key="extract.method.dialog/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1581713986540" />
+    <state x="2175" y="374" key="extract.method.dialog/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581742376722" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/Account.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/Account.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/Account.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/kata/banking/AccountTest.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

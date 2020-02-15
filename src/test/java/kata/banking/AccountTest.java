@@ -8,6 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
 
+    public static final String BASIC_STATEMENT_STRING = "Date              Amount        Balance\n";
+
     @Test
     public void shouldDepositAndStoreMoneyCorrectly() {
         //GIVEN
@@ -22,7 +24,7 @@ class AccountTest {
     }
 
     @Test
-    public void printStatementShouldBeEmptyStringWhenWeDontHaveMoneyInAccount() {
+    public void printStatementShouldBeBasicStringWhenWeDontHaveMoneyInAccount() {
         //GIVEN
         Account account = new Account();
 
@@ -30,7 +32,7 @@ class AccountTest {
         String printStatement = account.printStatement();
 
         //THEN
-        assert(printStatement.equals(""));
+        assert(printStatement.equals(BASIC_STATEMENT_STRING));
     }
 
     @Test
@@ -40,14 +42,20 @@ class AccountTest {
         Integer money = 500;
         account.deposit(money);
         Integer money2 = -100;
-        account.deposit(money2);
+        account.withDraw(money2);
+        String dateFormated = account.getDateFormated();
+        String expectedStatement =
+                BASIC_STATEMENT_STRING +
+                dateFormated + "        +500             500\n" +
+                dateFormated + "        -100             400";
 
         //WHEN
         String statement = account.printStatement();
+        Integer sum = money + money2;
+        String sumString = sum.toString();
 
         //THEN
-        assert(statement.contains(money.toString()));
-        assert(statement.contains(money2.toString()));
-        assert(account.getMoneyStored().equals(money + money2));
+        assert(statement.contains(expectedStatement));
+        assertEquals(account.getMoneyStored(), sumString);
     }
 }

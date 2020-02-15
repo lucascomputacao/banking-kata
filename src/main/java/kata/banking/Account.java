@@ -12,6 +12,7 @@ import java.util.Date;
 public class Account {
     ArrayList<String> bankStatementRegister = new ArrayList();
     Integer moneyStored = 0;
+    String statementString = "Date              Amount        Balance\n";
 
 
     public void deposit(Integer money) {
@@ -21,30 +22,39 @@ public class Account {
     }
 
     private void depositMoneyInAccount(Integer money) {
-        moneyStored =+ money;
+        if (money < 0) {
+            log("You can't deposit negative values");
+        } else {
+            moneyStored =+ money;
+        }
+
     }
 
-    private String getDateFormated() {
+    String getDateFormated() {
         Date date = Calendar.getInstance().getTime();
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         return dateFormat.format(date);
     }
 
     public void withDraw(Integer money) {
-
+        if (moneyStored >= money) {
+            moneyStored += money;
+            statementRegister(money);
+        } else {
+            log("You don't have this amount of money!");
+        }
     }
 
     public String printStatement() {
-        // if bankStatementList is empty return empty string
         if (!bankStatementRegister.isEmpty()) {
-            // Statement format:
-            // Date        Amount  Balance
-            //24.12.2015   +500      500
-            System.out.println("Date             Amount        Balance");
-            bankStatementRegister.forEach(System.out::println);
+            bankStatementRegister.forEach( s -> {
+                log("\nConcating statementString: \n" + statementString.concat(s) + "\n");
+                statementString += s + "\n";
+            });
         }
-        return "";
+        return statementString;
     }
+
 
     public String statementRegister(Integer depositMoney) {
         // Statement format:
@@ -52,9 +62,9 @@ public class Account {
         //24.12.2015   +500      500
         String statement = getDateFormated();
         statement += "        " + getMoneyPrefix(depositMoney) + "" + depositMoney;
-        statement += "             " + getBalance(depositMoney);
-        System.out.println("Saving New Statement: ");
-        System.out.println("Date             Amount        Balance\n" + statement);
+        statement += "             " + getMoneyStored();
+        log("\nSaving New Statement: ");
+        log("Date              Amount        Balance\n" + statement);
 
         bankStatementRegister.add(statement);
         return statement;
@@ -67,12 +77,11 @@ public class Account {
         return prefixMoney;
     }
 
-    public String getBalance(Integer depositMoney) {
-        Integer result = (moneyStored + depositMoney);
-        return result.toString();
-    }
-
     public String getMoneyStored() {
         return moneyStored.toString();
+    }
+
+    private void log(String logString) {
+        System.out.println(logString);
     }
 }
