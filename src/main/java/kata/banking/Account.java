@@ -10,6 +10,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Account {
+    public static final String NOT_ALLOWED_DEPOSIT_VALUES = "You can't deposit illegal values";
     ArrayList<String> bankStatementRegister = new ArrayList();
     Integer moneyStored = 0;
     String statementString = "Date              Amount        Balance\n";
@@ -18,14 +19,14 @@ public class Account {
     public void deposit(Integer money) {
         // deposita na conta
         depositMoneyInAccount(money);
-        statementRegister(money);
     }
 
     private void depositMoneyInAccount(Integer money) {
-        if (money < 0) {
-            log("You can't deposit negative values");
+        if (money <= 0) {
+            log(NOT_ALLOWED_DEPOSIT_VALUES);
         } else {
             moneyStored =+ money;
+            statementRegister(money);
         }
 
     }
@@ -38,11 +39,20 @@ public class Account {
 
     public void withDraw(Integer money) {
         if (moneyStored >= money) {
-            moneyStored -= money;
+            // to prevent calculation errors with signal integers
+            money = verifyWithDrawValues(money);
+            moneyStored = moneyStored + money;
             statementRegister(money);
         } else {
             log("You don't have this amount of money!");
         }
+    }
+
+    private Integer verifyWithDrawValues(Integer money) {
+        if (money > 0) {
+            money *= -1;
+        }
+        return money;
     }
 
     public String printStatement() {
@@ -82,6 +92,6 @@ public class Account {
     }
 
     private void log(String logString) {
-        System.out.println(logString);
+        System.out.print(logString);
     }
 }

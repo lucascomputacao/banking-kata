@@ -3,12 +3,32 @@
  */
 package kata.banking;
 
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
+import static kata.banking.Account.NOT_ALLOWED_DEPOSIT_VALUES;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
 
     public static final String BASIC_STATEMENT_STRING = "Date              Amount        Balance\n";
+
+    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    private final PrintStream originalOut = System.out;
+
+    @BeforeEach
+    public void setUpStreams() {
+        System.setOut(new PrintStream(outContent));
+    }
+
+    @AfterEach
+    public void restoreStreams() {
+        System.setOut(originalOut);
+    }
 
     @Test
     public void shouldDepositAndStoreMoneyCorrectly() {
@@ -22,6 +42,22 @@ class AccountTest {
         //THEN
         assert(account.getMoneyStored().equals(money.toString()));
     }
+
+    @Test
+    public void depositWithValuesLessThanZeroShouldBeRejectedWithMessage() {
+        //GIVEN
+        Account account = new Account();
+        Integer money = -1;
+        final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        //WHEN
+        account.deposit(money);
+
+        //THEN
+        assertEquals(NOT_ALLOWED_DEPOSIT_VALUES, outContent.toString());
+    }
+
 
     @Test
     public void printStatementShouldBeBasicStringWhenWeDontHaveMoneyInAccount() {
@@ -41,7 +77,7 @@ class AccountTest {
         Account account = new Account();
         Integer money = 500;
         account.deposit(money);
-        Integer money2 = -100;
+        Integer money2 = 100;
         account.withDraw(money2);
         String dateFormated = account.getDateFormated();
         String expectedStatement =
@@ -51,7 +87,7 @@ class AccountTest {
 
         //WHEN
         String statement = account.printStatement();
-        Integer sum = money + money2;
+        Integer sum = money - money2;
         String sumString = sum.toString();
 
         //THEN
