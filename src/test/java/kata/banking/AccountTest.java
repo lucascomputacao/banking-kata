@@ -47,7 +47,7 @@ class AccountTest {
     public void depositWithValuesLessThanZeroShouldBeRejectedWithMessage() {
         //GIVEN
         Account account = new Account();
-        Integer money = -1;
+        Integer money = 0;
         final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
 

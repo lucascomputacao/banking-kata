@@ -39,8 +39,8 @@ public class Account {
 
     public void withDraw(Integer money) {
         if (moneyStored >= money) {
-            // to prevent calculation errors with signal integers
-            money = verifyWithDrawValues(money);
+            // to prevent calculation errors with Integer signal
+            money = turnsWithDrawInNegativeValueIfNeeded(money);
             moneyStored = moneyStored + money;
             statementRegister(money);
         } else {
@@ -48,7 +48,7 @@ public class Account {
         }
     }
 
-    private Integer verifyWithDrawValues(Integer money) {
+    private Integer turnsWithDrawInNegativeValueIfNeeded(Integer money) {
         if (money > 0) {
             money *= -1;
         }
