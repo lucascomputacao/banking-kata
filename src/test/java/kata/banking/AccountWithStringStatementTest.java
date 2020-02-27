@@ -17,7 +17,7 @@ import java.util.Date;
 import static kata.banking.AccountWithStringStatement.NOT_ALLOWED_DEPOSIT_VALUES;
 import static org.junit.jupiter.api.Assertions.*;
 
-class AccountTest {
+class AccountWithStringStatementTest {
 
     public static final String BASIC_STATEMENT_STRING = "Date              Amount        Balance\n";
 
@@ -91,8 +91,8 @@ class AccountTest {
 
         //WHEN
         String statement = account.printStatement();
-        Integer sum = money - money2;
-        String sumString = sum.toString();
+        int sum = money - money2;
+        String sumString = Integer.toString(sum);
 
         //THEN
         assert(statement.contains(expectedStatement));

@@ -30,12 +30,6 @@ public class AccountWithStringStatement implements Account {
 
     }
 
-    private String getDateFormated() {
-        Date date = Calendar.getInstance().getTime();
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-        return dateFormat.format(date);
-    }
-
     public void withDraw(Integer money) {
         if (moneyStored >= money) {
             // to prevent calculation errors with Integer signal
