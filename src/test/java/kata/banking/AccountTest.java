@@ -9,8 +9,12 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
-import static kata.banking.Account.NOT_ALLOWED_DEPOSIT_VALUES;
+import static kata.banking.AccountWithStringStatement.NOT_ALLOWED_DEPOSIT_VALUES;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {
@@ -33,7 +37,7 @@ class AccountTest {
     @Test
     public void shouldDepositAndStoreMoneyCorrectly() {
         //GIVEN
-        Account account = new Account();
+        Account account = new AccountWithStringStatement();
         Integer money = 500;
 
         //WHEN
@@ -46,7 +50,7 @@ class AccountTest {
     @Test
     public void depositWithValuesLessThanZeroShouldBeRejectedWithMessage() {
         //GIVEN
-        Account account = new Account();
+        Account account = new AccountWithStringStatement();
         Integer money = 0;
         final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
@@ -62,7 +66,7 @@ class AccountTest {
     @Test
     public void printStatementShouldBeBasicStringWhenWeDontHaveMoneyInAccount() {
         //GIVEN
-        Account account = new Account();
+        Account account = new AccountWithStringStatement();
 
         //WHEN
         String printStatement = account.printStatement();
@@ -74,12 +78,12 @@ class AccountTest {
     @Test
     public void printStatementShouldReturnNonEmptyStringWhenWeHaveSomeMoneyInAccount() {
         //GIVEN
-        Account account = new Account();
+        Account account = new AccountWithStringStatement();
         Integer money = 500;
         account.deposit(money);
         Integer money2 = 100;
         account.withDraw(money2);
-        String dateFormated = account.getDateFormated();
+        String dateFormated = getDateFormated();
         String expectedStatement =
                 BASIC_STATEMENT_STRING +
                 dateFormated + "        +500             500\n" +
@@ -95,10 +99,16 @@ class AccountTest {
         assertEquals(account.getMoneyStored(), sumString);
     }
 
+    private String getDateFormated() {
+        Date date = Calendar.getInstance().getTime();
+        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        return dateFormat.format(date);
+    }
+
     @Test
     public void withDrawShouldBeDoneCorrectly() {
         // GIVEN
-        Account account = new Account();
+        Account account = new AccountWithStringStatement();
         account.deposit(100);
 
         // WHEN
@@ -111,9 +121,9 @@ class AccountTest {
     @Test
     public void withDrawWithEnoughResources() {
         //GIVEN
-        Account account = new Account();
+        Account account = new AccountWithStringStatement();
         account.deposit(100);
-        String dateFormated = account.getDateFormated();
+        String dateFormated = getDateFormated();
         String expectedStatement =
                 BASIC_STATEMENT_STRING +
                         dateFormated + "        +100             100";
