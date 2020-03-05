@@ -9,7 +9,6 @@ public class AccountWithMoney {
     private ArrayList<Statement> statementList = new ArrayList<>();
 
     public void printListOfStatements() {
-        //@TODO swipe list of statements and print all the records
         System.out.println("\nDate        Amount  Balance");
         statementList.forEach(statement -> {
             System.out.println(statement.toString());
