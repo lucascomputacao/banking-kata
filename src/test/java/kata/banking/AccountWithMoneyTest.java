@@ -7,19 +7,35 @@ import static org.junit.jupiter.api.Assertions.*;
 class AccountWithMoneyTest {
 
     @Test
-    public void printStatement() {
+    public void printListOfStatements() {
 
     }
 
     @Test
     public void depositShouldWorksCorrectly() {
-        Money money = new Money();
-        money.setAmount(100);
+        Money zeroMoney = new Money();
+        zeroMoney.setAmount(0);
+        Money depositMoney = new Money();
+        depositMoney.setAmount(100);
 
-        AccountWithMoney accountWithMoney = new AccountWithMoney(money);
-        accountWithMoney.deposit(money);
+        AccountWithMoney accountWithMoney = new AccountWithMoney();
+        accountWithMoney.deposit(depositMoney);
 
-        assertEquals(accountWithMoney.getMoneyStored().getAmount(), money.getAmount());
+        assertEquals(accountWithMoney.getMoneyStored().getAmount(), depositMoney.getAmount());
+    }
+
+    @Test
+    public void kataExample() {
+        Money fiveHundredMoney = new Money();
+        fiveHundredMoney.setAmount(500);
+        Money hundredMoney = new Money();
+        hundredMoney.setAmount(100);
+
+        AccountWithMoney accountWithMoney = new AccountWithMoney();
+        accountWithMoney.deposit(fiveHundredMoney);
+        accountWithMoney.withDraw(hundredMoney);
+        accountWithMoney.printListOfStatements();
+//        assertEquals(accountWithMoney.getMoneyStored().getAmount(), hundredMoney.getAmount());
     }
 
     @Test
@@ -29,7 +45,7 @@ class AccountWithMoneyTest {
         Money otherMoney = new Money();
         otherMoney.setAmount(100);
 
-        AccountWithMoney accountWithMoney = new AccountWithMoney(money);
+        AccountWithMoney accountWithMoney = new AccountWithMoney();
         accountWithMoney.deposit(money);
 
         accountWithMoney.withDraw(otherMoney);
@@ -47,7 +63,7 @@ class AccountWithMoneyTest {
         Money otherMoney = new Money();
         otherMoney.setAmount(200);
 
-        AccountWithMoney accountWithMoney = new AccountWithMoney(money);
+        AccountWithMoney accountWithMoney = new AccountWithMoney();
         accountWithMoney.deposit(money);
 
         accountWithMoney.withDraw(otherMoney);
@@ -63,11 +79,11 @@ class AccountWithMoneyTest {
         Money money = new Money();
         money.setAmount(100);
 
-        AccountWithMoney accountWithMoney = new AccountWithMoney(money);
+        AccountWithMoney accountWithMoney = new AccountWithMoney();
         accountWithMoney.deposit(money);
 
 
-        assertEquals(accountWithMoney.getMoneyStored(), money);
+        assertEquals(accountWithMoney.getMoneyStored().getAmount(), money.getAmount());
     }
 
 }

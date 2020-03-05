@@ -3,14 +3,14 @@ package kata.banking;
 public class Money {
     private int amount;
 
-    private Money newMoney(int amount) {
+    Money newMoney(int amount) {
         Money money = new Money();
         money.amount = amount;
         return money;
     }
 
-    public void setAmount(int amount){
-        this.amount = amount;
+    public int setAmount(Integer amount){
+        return this.amount = amount;
     }
     public int getAmount() {
         return amount;
@@ -47,6 +47,7 @@ public class Money {
     public boolean greatherThanEqual(Money otherMoney) {
         return greaterThan(otherMoney) || equal(otherMoney);
     }
+
     private int compare(Money otherMoney) {
         // Integer.compare(x,y) => return (x < y) ? -1 : ((x == y) ? 0 : 1);
         return Integer.compare(amount, otherMoney.amount);

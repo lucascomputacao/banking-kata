@@ -14,6 +14,12 @@ Write a class Account that offers the following methods void deposit(int) void w
 
 An example statement would be:
 
+```
 Date        Amount  Balance
-24.12.2015   +500      500
-23.8.2016    -100      400
+24.12.2015  +500    500
+23.8.2016   -100    400
+```
+
+### Dev Notes
+Money Class represents the monetary unit used by the bank based on the Money Design Pattern
+Adding Statement Class to be a Object that represents a Bank's Statement
