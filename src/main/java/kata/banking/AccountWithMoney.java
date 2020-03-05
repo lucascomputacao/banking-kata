@@ -11,7 +11,9 @@ public class AccountWithMoney {
     public void printListOfStatements() {
         //@TODO swipe list of statements and print all the records
         System.out.println("\nDate        Amount  Balance");
-        statementList.forEach(Statement::print);
+        statementList.forEach(statement -> {
+            System.out.println(statement.toString());
+        });
     }
 
     public void deposit(Money valueToDeposit) {
@@ -24,11 +26,12 @@ public class AccountWithMoney {
 
     public void withDraw(Money withDrawValue) {
         final Money MINUS_ONE_MONEY = new Money().newMoney(-1);
-        if (moneyStored.getAmount() >= withDrawValue.getAmount()) {
-            moneyStored = moneyStored.substractMoney(withDrawValue);
-            withDrawValue = withDrawValue.multiplyMoney(MINUS_ONE_MONEY);
-            statementList.add(new Statement(Calendar.getInstance().getTime(), withDrawValue, moneyStored));
+        if (moneyStored.lessThan(withDrawValue)){
+            return;
         }
+        moneyStored = moneyStored.substractMoney(withDrawValue);
+        withDrawValue = withDrawValue.multiplyMoney(MINUS_ONE_MONEY);
+        statementList.add(new Statement(Calendar.getInstance().getTime(), withDrawValue, moneyStored));
     }
 
     public Money getMoneyStored() {

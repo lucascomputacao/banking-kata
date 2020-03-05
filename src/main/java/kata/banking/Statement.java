@@ -15,44 +15,37 @@ public class Statement {
         this.balance = balance;
     }
 
-    public void print() {
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-        String dateStatement = dateFormat.format(date);
-        String prefixOfAmount = getPrefixOfAmount(amount.getAmount());
-        String prefixOfBalanceAmount = getPrefixOfBalance(balance.getAmount());
-        System.out.printf("%s  %s%s     %s%s\n", dateStatement,
-                prefixOfAmount, amount.getAmount(), prefixOfBalanceAmount, balance.getAmount());
+    public String toString() {
+        String dateStatement = getDateStringFormated();
+        String prefixOfAmount = getPrefixOfAmount(amount.getMoneyAmount());
+        String prefixOfBalanceAmount = getPrefixOfBalance(balance.getMoneyAmount());
+        return String.format("%s  %s%s     %s%s\n", dateStatement,
+                prefixOfAmount, amount.getMoneyAmount(), prefixOfBalanceAmount, balance.getMoneyAmount());
     }
 
-    private String getPrefixOfAmount(int amount) {
+    public String getDateStringFormated() {
+        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        return dateFormat.format(date);
+    }
+
+    public String getPrefixOfAmount(int amount) {
         if (amount > 0)  return "+";
         return "";
     }
-    private String getPrefixOfBalance(int amount) {
-        return amount >= 0 ? " " : "-";
+    public String getPrefixOfBalance(int amount) {
+        return amount >= 0 ? "" : "-";
     }
 
     public Date getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
-    public Money getAmount() {
+    public Money getStatementAmount() {
         return amount;
     }
 
-    public void setAmount(Money amount) {
-        this.amount = amount;
-    }
-
-    public Money getBalance() {
+    public Money getStatementBalance() {
         return balance;
     }
 
-    public void setBalance(Money balance) {
-        this.balance = balance;
-    }
 }

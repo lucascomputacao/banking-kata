@@ -11,12 +11,12 @@ class MoneyTest {
         Money money = new Money();
         Money otherMoney = new Money();
 
-        money.setAmount(1);
-        otherMoney.setAmount(2);
+        money.setMoneyAmount(1);
+        otherMoney.setMoneyAmount(2);
         Money moneyPlusOtherMoney = money.addMoney(otherMoney);
 
-        assertEquals(moneyPlusOtherMoney.getAmount(), money.getAmount() + otherMoney.getAmount());
-        assertEquals(moneyPlusOtherMoney.getAmount(), 3);
+        assertEquals(moneyPlusOtherMoney.getMoneyAmount(), money.getMoneyAmount() + otherMoney.getMoneyAmount());
+        assertEquals(moneyPlusOtherMoney.getMoneyAmount(), 3);
     }
 
     @Test
@@ -24,12 +24,12 @@ class MoneyTest {
         Money money = new Money();
         Money otherMoney = new Money();
 
-        money.setAmount(1);
-        otherMoney.setAmount(2);
+        money.setMoneyAmount(1);
+        otherMoney.setMoneyAmount(2);
         Money moneySubstractOtherMoney = money.substractMoney(otherMoney);
 
-        assertEquals(moneySubstractOtherMoney.getAmount(), money.getAmount() - otherMoney.getAmount());
-        assertEquals(moneySubstractOtherMoney.getAmount(), -1);
+        assertEquals(moneySubstractOtherMoney.getMoneyAmount(), money.getMoneyAmount() - otherMoney.getMoneyAmount());
+        assertEquals(moneySubstractOtherMoney.getMoneyAmount(), -1);
     }
 
     @Test
@@ -37,12 +37,12 @@ class MoneyTest {
         Money money = new Money();
         Money otherMoney = new Money();
 
-        money.setAmount(1);
-        otherMoney.setAmount(2);
+        money.setMoneyAmount(1);
+        otherMoney.setMoneyAmount(2);
         Money moneyMultipliedByOtherMoney = money.multiplyMoney(otherMoney);
 
-        assertEquals(moneyMultipliedByOtherMoney.getAmount(), money.getAmount() * otherMoney.getAmount());
-        assertEquals(moneyMultipliedByOtherMoney.getAmount(), 2);
+        assertEquals(moneyMultipliedByOtherMoney.getMoneyAmount(), money.getMoneyAmount() * otherMoney.getMoneyAmount());
+        assertEquals(moneyMultipliedByOtherMoney.getMoneyAmount(), 2);
     }
 
     @Test
@@ -50,8 +50,8 @@ class MoneyTest {
         Money money = new Money();
         Money otherMoney = new Money();
 
-        money.setAmount(1);
-        otherMoney.setAmount(2);
+        money.setMoneyAmount(1);
+        otherMoney.setMoneyAmount(2);
         boolean moneyIsLessThanOtherMoney = money.lessThan(otherMoney);
 
         assertTrue(moneyIsLessThanOtherMoney);
@@ -62,8 +62,8 @@ class MoneyTest {
         Money money = new Money();
         Money otherMoney = new Money();
 
-        money.setAmount(3);
-        otherMoney.setAmount(2);
+        money.setMoneyAmount(3);
+        otherMoney.setMoneyAmount(2);
         boolean moneyIsGreaterThanOtherMoney = money.greaterThan(otherMoney);
 
         assertTrue(moneyIsGreaterThanOtherMoney);
@@ -74,8 +74,8 @@ class MoneyTest {
         Money money = new Money();
         Money otherMoney = new Money();
 
-        money.setAmount(3);
-        otherMoney.setAmount(3);
+        money.setMoneyAmount(3);
+        otherMoney.setMoneyAmount(3);
         boolean moneyIsEqualsOtherMoney = money.equal(otherMoney);
 
         assertTrue(moneyIsEqualsOtherMoney);
@@ -88,9 +88,9 @@ class MoneyTest {
         Money otherMoney = new Money();
         Money anotherMoney = new Money();
 
-        money.setAmount(3);
-        otherMoney.setAmount(3);
-        anotherMoney.setAmount(4);
+        money.setMoneyAmount(3);
+        otherMoney.setMoneyAmount(3);
+        anotherMoney.setMoneyAmount(4);
 
         boolean moneyIsEquals = money.lessThanEqual(otherMoney);
         boolean moneyIsLessThanAnotherMoney = money.lessThanEqual(otherMoney);
@@ -105,9 +105,9 @@ class MoneyTest {
         Money otherMoney = new Money();
         Money anotherMoney = new Money();
 
-        money.setAmount(3);
-        otherMoney.setAmount(3);
-        anotherMoney.setAmount(4);
+        money.setMoneyAmount(3);
+        otherMoney.setMoneyAmount(3);
+        anotherMoney.setMoneyAmount(4);
 
         boolean moneyIsEquals = money.greatherThanEqual(otherMoney);
         boolean moneyIsGreaterThanAnotherMoney = money.greatherThanEqual(otherMoney);

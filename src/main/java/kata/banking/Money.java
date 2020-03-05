@@ -9,10 +9,10 @@ public class Money {
         return money;
     }
 
-    public int setAmount(Integer amount){
+    public int setMoneyAmount(Integer amount){
         return this.amount = amount;
     }
-    public int getAmount() {
+    public int getMoneyAmount() {
         return amount;
     }
 
