@@ -2,12 +2,29 @@ package kata.banking;
 
 import org.junit.jupiter.api.Test;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AccountWithMoneyTest {
 
     @Test
     public void printListOfStatements() {
+        Money twoHundredMoney = new Money(200);
+        Money depositMoney = new Money(100);
+
+        AccountWithMoney accountWithMoney = new AccountWithMoney();
+        accountWithMoney.deposit(depositMoney);
+        accountWithMoney.deposit(twoHundredMoney);
+
+        String expectedListOfStatements = getDateStringFormated(Calendar.getInstance().getTime())
+                + "  +100     100\n" + getDateStringFormated(Calendar.getInstance().getTime()) + "  +200     300\n";
+        String actualListOfStatements = accountWithMoney.printListOfStatements();
+
+        assertTrue(actualListOfStatements.contains(expectedListOfStatements));
     }
 
     @Test
@@ -30,7 +47,8 @@ class AccountWithMoneyTest {
         accountWithMoney.deposit(fiveHundredMoney);
         accountWithMoney.withDraw(hundredMoney);
         accountWithMoney.printListOfStatements();
-//        assertEquals(accountWithMoney.getMoneyStored().getAmount(), hundredMoney.getAmount());
+
+        assertEquals(accountWithMoney.getMoneyStored().getMoneyAmount(), 400);
     }
 
     @Test
@@ -57,9 +75,7 @@ class AccountWithMoneyTest {
         AccountWithMoney accountWithMoney = new AccountWithMoney();
         accountWithMoney.deposit(money);
 
-        Exception exception = assertThrows(Exception.class, () -> {
-            accountWithMoney.withDraw(otherMoney);
-        });
+        Exception exception = assertThrows(Exception.class, () -> accountWithMoney.withDraw(otherMoney));
         String expectedMessage = "Insuficient amount in Account";
 
         Money expectedMoney = new Money(100);
@@ -77,6 +93,11 @@ class AccountWithMoneyTest {
         accountWithMoney.deposit(money);
 
         assertEquals(accountWithMoney.getMoneyStored().getMoneyAmount(), money.getMoneyAmount());
+    }
+
+    public String getDateStringFormated(Date date) {
+        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        return dateFormat.format(date);
     }
 
 }

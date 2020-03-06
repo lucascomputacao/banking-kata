@@ -8,11 +8,11 @@ public class AccountWithMoney {
     private Money moneyStored = new Money(0);
     private ArrayList<Statement> statementList = new ArrayList<>();
 
-    public void printListOfStatements() {
-        System.out.println("\nDate        Amount  Balance");
-        statementList.forEach(statement -> {
-            System.out.print(statement.toString());
-        });
+    public String printListOfStatements() {
+        StringBuilder listOfStatements = new StringBuilder();
+        listOfStatements.append("\nDate        Amount  Balance\n");
+        statementList.forEach(statement -> listOfStatements.append(statement.toString()));
+        return listOfStatements.toString();
     }
 
     public void deposit(Money valueToDeposit) {
