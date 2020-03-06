@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cb5da5f-e97c-47ab-a497-ee41a7b4fb6e" name="Default Changelist" comment="Starting Tests">
+    <list default="true" id="0cb5da5f-e97c-47ab-a497-ee41a7b4fb6e" name="Default Changelist" comment="Changes' Description:&#10;- AccountWithMoney.java: refactoring printListOfStatements method&#10;- AccountWithMoneyTest.java: adding test for printListOfStatements method">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kata/banking/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kata/banking/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/kata/banking/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/kata/banking/AccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kata/banking/Statement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kata/banking/Statement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,12 +15,20 @@
     <option name="done" value="true" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="99" />
+    <option name="myElementSize" value="314" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,6 +47,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -46,17 +56,26 @@
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.AccountTest">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="kata.banking" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.Tests">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountWithMoneyTest.printListOfStatements" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata-banking.test" />
       <extension name="coverage">
         <pattern>
@@ -65,31 +84,15 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="kata.banking" />
-      <option name="MAIN_CLASS_NAME" value="kata.banking.AccountTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountTest.depositWithValuesLessThanZeroShouldBeRejectedWithMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kata-banking.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kata.banking.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="kata.banking" />
-      <option name="MAIN_CLASS_NAME" value="kata.banking.AccountTest" />
-      <option name="METHOD_NAME" value="depositWithValuesLessThanZeroShouldBeRejectedWithMessage" />
+      <option name="MAIN_CLASS_NAME" value="kata.banking.AccountWithMoneyTest" />
+      <option name="METHOD_NAME" value="printListOfStatements" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.printStatementShouldReturnNonEmptyStringWhenWeHaveSomeMoneyInAccount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AccountWithMoneyTest.withDrawWithoutAvailableResourceShouldNotBeDone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata-banking.test" />
       <extension name="coverage">
         <pattern>
@@ -98,15 +101,33 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="kata.banking" />
-      <option name="MAIN_CLASS_NAME" value="kata.banking.AccountTest" />
-      <option name="METHOD_NAME" value="printStatementShouldReturnNonEmptyStringWhenWeHaveSomeMoneyInAccount" />
+      <option name="MAIN_CLASS_NAME" value="kata.banking.AccountWithMoneyTest" />
+      <option name="METHOD_NAME" value="withDrawWithoutAvailableResourceShouldNotBeDone" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.shouldDepositAndStoreMoneyCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in kata-banking (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kata-banking" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in kata-banking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kata-banking" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StatementTest.getStatementBalanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="kata-banking.test" />
       <extension name="coverage">
         <pattern>
@@ -115,27 +136,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="kata.banking" />
-      <option name="MAIN_CLASS_NAME" value="kata.banking.AccountTest" />
-      <option name="METHOD_NAME" value="shouldDepositAndStoreMoneyCorrectly" />
+      <option name="MAIN_CLASS_NAME" value="kata.banking.StatementTest" />
+      <option name="METHOD_NAME" value="getStatementBalanceTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AccountTest.withDrawWithEnoughResources" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="kata-banking.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="kata.banking.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="Tests" type="JUnit" factoryName="JUnit">
+      <useClassPathOnly />
       <option name="PACKAGE_NAME" value="kata.banking" />
-      <option name="MAIN_CLASS_NAME" value="kata.banking.AccountTest" />
-      <option name="METHOD_NAME" value="withDrawWithEnoughResources" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/test" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,13 +175,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.Tests" />
+      <item itemvalue="JUnit.StatementTest.getStatementBalanceTest" />
+      <item itemvalue="JUnit.AccountWithMoneyTest.withDrawWithoutAvailableResourceShouldNotBeDone" />
+      <item itemvalue="JUnit.All in kata-banking" />
+      <item itemvalue="JUnit.All in kata-banking (1)" />
+      <item itemvalue="JUnit.AccountWithMoneyTest.printListOfStatements" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AccountTest" />
-        <item itemvalue="JUnit.AccountTest.depositWithValuesLessThanZeroShouldBeRejectedWithMessage" />
-        <item itemvalue="JUnit.AccountTest.shouldDepositAndStoreMoneyCorrectly" />
-        <item itemvalue="JUnit.AccountTest.withDrawWithEnoughResources" />
-        <item itemvalue="JUnit.AccountTest.printStatementShouldReturnNonEmptyStringWhenWeHaveSomeMoneyInAccount" />
+        <item itemvalue="JUnit.AccountWithMoneyTest.printListOfStatements" />
+        <item itemvalue="JUnit.All in kata-banking (1)" />
+        <item itemvalue="JUnit.AccountWithMoneyTest.withDrawWithoutAvailableResourceShouldNotBeDone" />
+        <item itemvalue="JUnit.All in kata-banking" />
+        <item itemvalue="JUnit.StatementTest.getStatementBalanceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +217,17 @@
       <updated>1581711835943</updated>
       <workItem from="1581711843720" duration="15497000" />
       <workItem from="1581800208308" duration="4344000" />
-      <workItem from="1581878498678" duration="3667000" />
+      <workItem from="1581878498678" duration="4863000" />
+      <workItem from="1582314665332" duration="334000" />
+      <workItem from="1582378460812" duration="1008000" />
+      <workItem from="1582555642446" duration="36000" />
+      <workItem from="1582664520553" duration="742000" />
+      <workItem from="1582747750041" duration="10625000" />
+      <workItem from="1582842375567" duration="137000" />
+      <workItem from="1582940519934" duration="6440000" />
+      <workItem from="1583254722358" duration="1094000" />
+      <workItem from="1583344166183" duration="9237000" />
+      <workItem from="1583416152275" duration="24030000" />
     </task>
     <task id="LOCAL-00001" summary="Creating class Account">
       <created>1581712116484</created>
@@ -206,7 +243,77 @@
       <option name="project" value="LOCAL" />
       <updated>1581742553265</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Account:&#10;- adding constant for not allowed values in deposit&#10;- refactoring in deposit method to fix bug with not allowed values&#10;- refactoring withDraw method to fix bug with negative values&#10;&#10;AccountTest:&#10;- adding test for deposits with not allowed values&#10;- adding test for log method that are using System.out">
+      <created>1581884229856</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581884229856</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Refactoring method name and test for Account">
+      <created>1582665860587</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582665860587</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Refactoring code:&#10;- Creating new interface Account &#10;- Renaming old Account class to AccountWithStringStatement just to maitaing old code working and preparing for apply Design Pattern&#10;- Adding Lint to Unchecked Operations at build.gradle file">
+      <created>1582768879008</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582768879009</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adding Money Desing Pattern:&#10;- Adding Money class&#10;- Adding tests for Money class&#10;- Renaming AccountTest to AccountWithStringStatementTest">
+      <created>1582804406708</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582804406709</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adding Test for AccountWithMoney:&#10;-">
+      <created>1582986839229</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582986839229</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Changes into Money Desing Pattern:&#10;- AccountWithMoney: add printStatement method, changing method withDraw method&#10;- Statement: adding new Class Statement to handle with statement's records&#10;- AccountWithMoneyTest: initiating some tests after">
+      <created>1583429971625</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1583429971626</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changes' Description:&#10;- AccountWithMoney.java: refactoring with fail fast in withDraw method&#10;- Money.java: renaming methods to prevent ambiguities&#10;- Statement.java: removing unused methods and refactoring toString, getPrefixOfAmount and getPrefixOfBalance methods">
+      <created>1583445373755</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1583445373756</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Removing todo">
+      <created>1583445401994</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1583445401994</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Changes' description:&#10;- Adding .idea directory to gitignore&#10;- AccountWithMoney.java: Initializing Money attibute and refactoring into deposit and withDraw methods to improve record statement process&#10;- Money.java: Minors refacts &#10;- MoneyTest: adjusting tests for the changes&#10;- StatementTest: adjusting tests for the changes">
+      <created>1583460745117</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1583460745120</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Changes' Description:&#10;- AccountWithMoney.java: refactoring printListOfStatements method&#10;- AccountWithMoneyTest.java: adding test for printListOfStatements method">
+      <created>1583462735571</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1583462735572</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,75 +322,124 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creating class Account" />
     <MESSAGE value="Starting Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Starting Tests" />
+    <MESSAGE value="Account:&#10;- adding constant for not allowed values in deposit&#10;- refactoring in deposit method to fix bug with not allowed values&#10;- refactoring withDraw method to fix bug with negative values&#10;&#10;AccountTest:&#10;- adding test for deposits with not allowed values&#10;- adding test for log method that are using System.out" />
+    <MESSAGE value="Refactoring method name and test for Account" />
+    <MESSAGE value="Refactoring code:&#10;- Creating new interface Account &#10;- Renaming old Account class to AccountWithStringStatement just to maitaing old code working and preparing for apply Design Pattern&#10;- Adding Lint to Unchecked Operations at build.gradle file" />
+    <MESSAGE value="Adding Money Desing Pattern:&#10;- Adding Money class&#10;- Adding tests for Money class&#10;- Renaming AccountTest to AccountWithStringStatementTest" />
+    <MESSAGE value="Adding Test for AccountWithMoney:&#10;-" />
+    <MESSAGE value="Changes into Money Desing Pattern:&#10;- AccountWithMoney: add printStatement method, changing method withDraw method&#10;- Statement: adding new Class Statement to handle with statement's records&#10;- AccountWithMoneyTest: initiating some tests after" />
+    <MESSAGE value="Changes' Description:&#10;- AccountWithMoney.java: refactoring with fail fast in withDraw method&#10;- Money.java: renaming methods to prevent ambiguities&#10;- Statement.java: removing unused methods and refactoring toString, getPrefixOfAmount and getPrefixOfBalance methods" />
+    <MESSAGE value="Removing todo" />
+    <MESSAGE value="Changes' description:&#10;- Adding .idea directory to gitignore&#10;- AccountWithMoney.java: Initializing Money attibute and refactoring into deposit and withDraw methods to improve record statement process&#10;- Money.java: Minors refacts &#10;- MoneyTest: adjusting tests for the changes&#10;- StatementTest: adjusting tests for the changes" />
+    <MESSAGE value="Changes' Description:&#10;- AccountWithMoney.java: refactoring printListOfStatements method&#10;- AccountWithMoneyTest.java: adding test for printListOfStatements method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes' Description:&#10;- AccountWithMoney.java: refactoring printListOfStatements method&#10;- AccountWithMoneyTest.java: adding test for printListOfStatements method" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1542" y="126" width="1608" height="1217" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1581883771628">
+    <state x="2045" y="147" key="#Tests" timestamp="1583254925174">
+      <screen x="1440" y="-42" width="1920" height="1057" />
+    </state>
+    <state x="2045" y="147" key="#Tests/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583254925174" />
+    <state x="1922" y="148" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583254880548">
+      <screen x="1440" y="-42" width="1920" height="1057" />
+    </state>
+    <state x="1922" y="148" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583254880548" />
+    <state x="1542" y="126" width="1608" height="1217" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1583462519247">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state x="1542" y="126" width="1608" height="1217" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581883771628" />
-    <state x="251" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1581712097654">
+    <state x="1517" y="35" width="1206" height="908" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583442800703" />
+    <state x="1542" y="126" width="1608" height="1217" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583462519247" />
+    <state x="786" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1583436244110">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="2488" y="176" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583357573571" />
+    <state x="2837" y="315" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583365787333" />
+    <state x="786" y="204" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1583436244110" />
+    <state x="2195" y="269" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1583254810881">
+      <screen x="1440" y="-42" width="1920" height="1057" />
+    </state>
+    <state x="2195" y="269" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583254810881" />
+    <state x="3064" y="380" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1583366097936">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state x="3064" y="380" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583366097936" />
+    <state x="1886" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583423521405">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1886" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583423521405" />
     <state x="251" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.877@0.23.1440.877" timestamp="1581712097654" />
-    <state x="2465" y="225" width="926" height="574" key="#xdebugger.evaluate" timestamp="1581881719968">
+    <state x="870" y="228" width="926" height="574" key="#xdebugger.evaluate" timestamp="1583436620040">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="2465" y="225" width="926" height="574" key="#xdebugger.evaluate/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583420413534" />
+    <state x="870" y="228" key="#xdebugger.evaluate/0.23.1440.877@0.23.1440.877" timestamp="1583436620040" />
+    <state x="2621" y="560" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583422287789">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state x="2465" y="225" width="926" height="574" key="#xdebugger.evaluate/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581881719968" />
-    <state x="483" y="174" key="#xdebugger.evaluate/0.23.1440.877@0.23.1440.877" timestamp="1581715370356" />
-    <state x="1979" y="84" key="CommitChangelistDialog2" timestamp="1581802838400">
+    <state x="2621" y="560" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583422287789" />
+    <state x="1609" y="94" width="1440" height="1293" key="CommitChangelistDialog2" timestamp="1583462735155">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state x="1979" y="84" key="CommitChangelistDialog2/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581802838400" />
-    <state x="303" y="61" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1581712115666" />
-    <state width="1766" height="480" key="GridCell.Tab.0.bottom" timestamp="1581883774254">
+    <state x="1608" y="-42" width="1506" height="1036" key="CommitChangelistDialog2/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583445401854" />
+    <state x="1609" y="94" width="1440" height="1293" key="CommitChangelistDialog2/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583462735155" />
+    <state x="303" y="23" width="929" height="877" key="CommitChangelistDialog2/0.23.1440.877@0.23.1440.877" timestamp="1582986838639" />
+    <state x="2745" y="75" width="1152" height="1101" key="DiffContextDialog" timestamp="1583460683962">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state width="1558" height="241" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1581713932897" />
-    <state width="1766" height="480" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581883774254" />
-    <state width="1398" height="276" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1581715652686" />
-    <state width="1766" height="480" key="GridCell.Tab.0.center" timestamp="1581883774253">
+    <state x="2745" y="75" width="1152" height="1101" key="DiffContextDialog/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583460683962" />
+    <state width="2211" height="475" key="GridCell.Tab.0.bottom" timestamp="1583463201515">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state width="1558" height="241" key="GridCell.Tab.0.center/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1581713932896" />
-    <state width="1766" height="480" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581883774253" />
-    <state width="1398" height="276" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1581715652681" />
-    <state width="1766" height="480" key="GridCell.Tab.0.left" timestamp="1581883774252">
+    <state width="1532" height="291" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583446367875" />
+    <state width="2211" height="475" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583463201515" />
+    <state width="1398" height="223" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1583436782038" />
+    <state width="2211" height="475" key="GridCell.Tab.0.center" timestamp="1583463201512">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state width="1558" height="241" key="GridCell.Tab.0.left/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1581713932893" />
-    <state width="1766" height="480" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581883774252" />
-    <state width="1398" height="276" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1581715652677" />
-    <state width="1766" height="480" key="GridCell.Tab.0.right" timestamp="1581883774253">
+    <state width="1532" height="291" key="GridCell.Tab.0.center/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583446367874" />
+    <state width="2211" height="475" key="GridCell.Tab.0.center/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583463201512" />
+    <state width="1398" height="223" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1583436782037" />
+    <state width="2211" height="475" key="GridCell.Tab.0.left" timestamp="1583463201511">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state width="1558" height="241" key="GridCell.Tab.0.right/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1581713932896" />
-    <state width="1766" height="480" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581883774253" />
-    <state width="1398" height="276" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1581715652685" />
-    <state width="1766" height="459" key="GridCell.Tab.1.bottom" timestamp="1581883396029">
+    <state width="1532" height="291" key="GridCell.Tab.0.left/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583446367873" />
+    <state width="2211" height="475" key="GridCell.Tab.0.left/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583463201511" />
+    <state width="1398" height="223" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1583436782037" />
+    <state width="2211" height="475" key="GridCell.Tab.0.right" timestamp="1583463201512">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state width="1766" height="459" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581883396029" />
-    <state width="1398" height="276" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1581715652688" />
-    <state width="1766" height="459" key="GridCell.Tab.1.center" timestamp="1581883396029">
+    <state width="1532" height="291" key="GridCell.Tab.0.right/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583446367874" />
+    <state width="2211" height="475" key="GridCell.Tab.0.right/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583463201512" />
+    <state width="1398" height="223" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1583436782037" />
+    <state width="2211" height="523" key="GridCell.Tab.1.bottom" timestamp="1583462414395">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state width="1766" height="459" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581883396029" />
-    <state width="1398" height="276" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1581715652687" />
-    <state width="1766" height="459" key="GridCell.Tab.1.left" timestamp="1581883396028">
+    <state width="1532" height="369" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583444996553" />
+    <state width="2211" height="523" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583462414395" />
+    <state width="1398" height="296" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1583436674352" />
+    <state width="2211" height="523" key="GridCell.Tab.1.center" timestamp="1583462414394">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state width="1766" height="459" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581883396028" />
-    <state width="1398" height="276" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1581715652686" />
-    <state width="1766" height="459" key="GridCell.Tab.1.right" timestamp="1581883396029">
+    <state width="1532" height="369" key="GridCell.Tab.1.center/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583444996552" />
+    <state width="2211" height="523" key="GridCell.Tab.1.center/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583462414394" />
+    <state width="1398" height="296" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1583436674352" />
+    <state width="2211" height="523" key="GridCell.Tab.1.left" timestamp="1583462414393">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state width="1766" height="459" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581883396029" />
-    <state width="1398" height="276" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1581715652688" />
-    <state x="2014" y="471" key="Vcs.Push.Dialog.v2" timestamp="1581802850649">
+    <state width="1532" height="369" key="GridCell.Tab.1.left/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583444996551" />
+    <state width="2211" height="523" key="GridCell.Tab.1.left/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583462414393" />
+    <state width="1398" height="296" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1583436674351" />
+    <state width="2211" height="523" key="GridCell.Tab.1.right" timestamp="1583462414395">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state x="2014" y="471" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581802850649" />
+    <state width="1532" height="369" key="GridCell.Tab.1.right/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583444996552" />
+    <state width="2211" height="523" key="GridCell.Tab.1.right/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583462414395" />
+    <state width="1398" height="296" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1583436674352" />
+    <state x="2014" y="471" key="Vcs.Push.Dialog.v2" timestamp="1583462739108">
+      <screen x="1440" y="23" width="2560" height="1417" />
+    </state>
+    <state x="1909" y="62" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583445403260" />
+    <state x="2014" y="471" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583462739108" />
+    <state x="352" y="109" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1582986872590" />
     <state x="291" y="66" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1581711974749">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -292,68 +448,112 @@
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
     <state x="3018" y="655" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581810449288" />
-    <state x="2175" y="374" key="extract.method.dialog" timestamp="1581883804173">
+    <state x="767" y="220" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1583436971361">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="2803" y="341" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1582941068274" />
+    <state x="767" y="220" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.23.1440.877@0.23.1440.877" timestamp="1583436971361" />
+    <state x="2884" y="169" key="extract.method.dialog" timestamp="1583456407756">
       <screen x="1440" y="23" width="2560" height="1417" />
     </state>
-    <state x="1991" y="220" key="extract.method.dialog/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1581713986540" />
-    <state x="2175" y="374" key="extract.method.dialog/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1581883804173" />
+    <state x="1991" y="220" key="extract.method.dialog/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583442597128" />
+    <state x="2884" y="169" key="extract.method.dialog/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1583456407756" />
+    <state x="2593" y="64" key="refactoring.ChangeSignatureDialog" timestamp="1583445634813">
+      <screen x="1440" y="-42" width="1920" height="1057" />
+    </state>
+    <state x="2593" y="64" key="refactoring.ChangeSignatureDialog/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583445634813" />
+    <state x="2977" y="165" key="refactoring.ChangeSignatureDialog/0.23.1440.877/1440.23.2560.1417@1440.23.2560.1417" timestamp="1582942471652" />
+    <state x="1953" y="187" key="search.everywhere.popup" timestamp="1583443220529">
+      <screen x="1440" y="-42" width="1920" height="1057" />
+    </state>
+    <state x="1953" y="187" key="search.everywhere.popup/0.23.1440.877/1440.-42.1920.1057@1440.-42.1920.1057" timestamp="1583443220529" />
+    <state x="385" y="213" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1583362147126" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/kata/banking/Account.java</url>
-          <line>58</line>
+          <line>14</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/Account.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/kata/banking/AccountTest.java</url>
-          <line>79</line>
+          <url>file://$PROJECT_DIR$/src/test/java/kata/banking/AccountWithStringStatementTest.java</url>
+          <line>98</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/Account.java</url>
-          <line>46</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/Account.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/Account.java</url>
-          <line>43</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/Account.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/kata/banking/AccountTest.java</url>
-          <line>110</line>
+          <url>file://$PROJECT_DIR$/src/test/java/kata/banking/AccountWithStringStatementTest.java</url>
+          <line>135</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/Account.java</url>
-          <line>25</line>
+          <url>file://$PROJECT_DIR$/src/test/java/kata/banking/AccountWithMoneyTest.java</url>
+          <line>61</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/Money.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/AccountWithMoney.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/kata/banking/AccountWithMoneyTest.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/AccountWithMoney.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/kata/banking/StatementTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/kata/banking/Statement.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/kata/banking/AccountWithMoneyTest.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/kata_banking$StatementTest_getStatementBalanceTest.ic" NAME="StatementTest.getStatementBalanceTest Coverage Results" MODIFIED="1583445069624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>kata.banking.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/kata_banking$MoneyTest.ic" NAME="MoneyTest Coverage Results" MODIFIED="1582803891323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>kata.banking.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/kata_banking$AccountTest_printStatementShouldReturnNonEmptyStringWhenWeHaveSomeMoneyInAccount.ic" NAME="AccountTest.printStatementShouldReturnNonEmptyStringWhenWeHaveSomeMoneyInAccount Coverage Results" MODIFIED="1581879511445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>kata.banking.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/kata_banking$AccountTest.ic" NAME="AccountTest Coverage Results" MODIFIED="1581881788479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/kata_banking$Tests.ic" NAME="Tests Coverage Results" MODIFIED="1583463201373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/kata_banking$AccountWithMoneyTest.ic" NAME="AccountWithMoneyTest Coverage Results" MODIFIED="1583366351786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>kata.banking.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/kata_banking$MoneyTest_lessThan.ic" NAME="MoneyTest.lessThan Coverage Results" MODIFIED="1582774725852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>kata.banking.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/kata_banking$MoneyTest_substractMoney.ic" NAME="MoneyTest.substractMoney Coverage Results" MODIFIED="1582774523078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>kata.banking.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/kata_banking$AccountWithStringStatementTest.ic" NAME="AccountWithStringStatementTest Coverage Results" MODIFIED="1582803831280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>kata.banking.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/kata_banking$AccountTest.ic" NAME="AccountTest Coverage Results" MODIFIED="1581887073617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>kata.banking.*</FILTER>
     </SUITE>
   </component>

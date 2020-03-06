@@ -28,24 +28,14 @@ public class Statement {
         return dateFormat.format(date);
     }
 
-    public String getPrefixOfAmount(int amount) {
-        if (amount > 0)  return "+";
-        return "";
-    }
-    public String getPrefixOfBalance(int amount) {
-        return amount >= 0 ? "" : "-";
-    }
+    public String getPrefixOfAmount(int amount) { return  amount > 0  ? "+" : ""; }
 
-    public Date getDate() {
-        return date;
-    }
+    public String getPrefixOfBalance(int amount) { return amount >= 0 ? "" : "-"; }
 
-    public Money getStatementAmount() {
-        return amount;
-    }
+    public Date getDate() { return date; }
 
-    public Money getStatementBalance() {
-        return balance;
-    }
+    public Money getStatementAmount() { return amount; }
+
+    public Money getStatementBalance() { return balance; }
 
 }
