@@ -16,14 +16,16 @@ public class Statement {
     }
 
     public String toString() {
-        String dateStatement = getDateStringFormated();
-        String prefixOfAmount = getPrefixOfAmount(amount.getMoneyAmount());
-        String prefixOfBalanceAmount = getPrefixOfBalance(balance.getMoneyAmount());
-        return String.format("%s  %s%s     %s%s\n", dateStatement,
-                prefixOfAmount, amount.getMoneyAmount(), prefixOfBalanceAmount, balance.getMoneyAmount());
+        return String.format("%s  %s%s     %s%s\n",
+                getStatementDateStringFormated(),
+                getPrefixOfAmount(amount.getMoneyAmount()),
+                amount.getMoneyAmount(),
+                getPrefixOfBalance(balance.getMoneyAmount()),
+                balance.getMoneyAmount()
+        );
     }
 
-    public String getDateStringFormated() {
+    public String getStatementDateStringFormated() {
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         return dateFormat.format(date);
     }

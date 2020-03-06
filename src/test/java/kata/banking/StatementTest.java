@@ -66,7 +66,7 @@ class StatementTest {
         Money balance = new Money(20);
         Statement statement = new Statement(Calendar.getInstance().getTime(), amount, balance);
 
-        String dateOfStatement = statement.getDateStringFormated();
+        String dateOfStatement = statement.getStatementDateStringFormated();
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         String expectedDateFormated = dateFormat.format(Calendar.getInstance().getTime());
 
