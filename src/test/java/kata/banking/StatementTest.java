@@ -12,8 +12,8 @@ class StatementTest {
 
     @Test
     void testToString() {
-        Money amount = new Money().newMoney(10);
-        Money balance = new Money().newMoney(10);
+        Money amount = new Money(10);
+        Money balance = new Money(50);
         Statement statement = new Statement(Calendar.getInstance().getTime(), amount, balance);
 
         String actualStatement = statement.toString();
@@ -28,8 +28,8 @@ class StatementTest {
 
     @Test
     void testGetPrefixOfAmountReturnsEmptyStringForNegativeValueOfAmount() {
-        Money amount = new Money().newMoney(-10);
-        Money balance = new Money().newMoney(10);
+        Money amount = new Money(-10);
+        Money balance = new Money(100);
         Statement statement = new Statement(Calendar.getInstance().getTime(), amount, balance);
 
         String prefixOfAmount = statement.getPrefixOfAmount(amount.getMoneyAmount());
@@ -39,8 +39,8 @@ class StatementTest {
 
     @Test
     void testGetPrefixOfAmountReturnsPlusStringForPositiveValuesOfAmount() {
-        Money amount = new Money().newMoney(10);
-        Money balance = new Money().newMoney(10);
+        Money amount = new Money(10);
+        Money balance = new Money(80);
         Statement statement = new Statement(Calendar.getInstance().getTime(), amount, balance);
 
         String prefixOfAmount = statement.getPrefixOfAmount(amount.getMoneyAmount());
@@ -50,8 +50,8 @@ class StatementTest {
 
     @Test
     void getDateFormatShouldReturnDate() {
-        Money amount = new Money().newMoney(10);
-        Money balance = new Money().newMoney(10);
+        Money amount = new Money(10);
+        Money balance = new Money(50);
         Statement statement = new Statement(Calendar.getInstance().getTime(), amount, balance);
 
         String dateOfStatement = statement.getDate().toString();
@@ -62,8 +62,8 @@ class StatementTest {
 
     @Test
     void getDateFormatShouldReturnFormatedDate() {
-        Money amount = new Money().newMoney(10);
-        Money balance = new Money().newMoney(10);
+        Money amount = new Money(10);
+        Money balance = new Money(20);
         Statement statement = new Statement(Calendar.getInstance().getTime(), amount, balance);
 
         String dateOfStatement = statement.getDateStringFormated();
@@ -75,8 +75,8 @@ class StatementTest {
 
     @Test
     void getAmountTest() {
-        Money amount = new Money().newMoney(10);
-        Money balance = new Money().newMoney(10);
+        Money amount = new Money(10);
+        Money balance = new Money(30);
         Statement statement = new Statement(Calendar.getInstance().getTime(), amount, balance);
 
         Integer actualAmount = statement.getStatementAmount().getMoneyAmount();
@@ -86,8 +86,8 @@ class StatementTest {
 
     @Test
     void getStatementBalanceTest() {
-        Money amount = new Money().newMoney(10);
-        Money balance = new Money().newMoney(10);
+        Money amount = new Money(10);
+        Money balance = new Money(10000);
         Statement statement = new Statement(Calendar.getInstance().getTime(), amount, balance);
 
         Money actualBalance = statement.getStatementBalance();

@@ -4,37 +4,37 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 public class AccountWithMoney {
-
-    private Money moneyStored = new Money();
+    // Initializing account without Money
+    private Money moneyStored = new Money(0);
     private ArrayList<Statement> statementList = new ArrayList<>();
 
     public void printListOfStatements() {
         System.out.println("\nDate        Amount  Balance");
         statementList.forEach(statement -> {
-            System.out.println(statement.toString());
+            System.out.print(statement.toString());
         });
     }
 
     public void deposit(Money valueToDeposit) {
         moneyStored = moneyStored.addMoney(valueToDeposit);
-
-        Statement statement = new Statement(Calendar.getInstance().getTime(), valueToDeposit,
-                moneyStored);
-        statementList.add(statement);
+        recordStatement(valueToDeposit);
     }
 
-    public void withDraw(Money withDrawValue) {
-        final Money MINUS_ONE_MONEY = new Money().newMoney(-1);
+    public void withDraw(Money withDrawValue) throws Exception {
         if (moneyStored.lessThan(withDrawValue)){
-            return;
+            throw new Exception("Insuficient amount in Account");
         }
         moneyStored = moneyStored.substractMoney(withDrawValue);
-        withDrawValue = withDrawValue.multiplyMoney(MINUS_ONE_MONEY);
-        statementList.add(new Statement(Calendar.getInstance().getTime(), withDrawValue, moneyStored));
+        withDrawValue = withDrawValue.multiplyMoney(new Money(-1));
+        recordStatement(withDrawValue);
     }
 
     public Money getMoneyStored() {
         return moneyStored;
+    }
+
+    private void recordStatement(Money amountToSave) {
+        statementList.add(new Statement(Calendar.getInstance().getTime(), amountToSave, moneyStored));
     }
 
 }

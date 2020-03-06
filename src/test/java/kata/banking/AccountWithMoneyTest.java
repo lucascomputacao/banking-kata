@@ -8,15 +8,12 @@ class AccountWithMoneyTest {
 
     @Test
     public void printListOfStatements() {
-
     }
 
     @Test
     public void depositShouldWorksCorrectly() {
-        Money zeroMoney = new Money();
-        zeroMoney.setMoneyAmount(0);
-        Money depositMoney = new Money();
-        depositMoney.setMoneyAmount(100);
+        Money zeroMoney = new Money(0);
+        Money depositMoney = new Money(100);
 
         AccountWithMoney accountWithMoney = new AccountWithMoney();
         accountWithMoney.deposit(depositMoney);
@@ -25,11 +22,9 @@ class AccountWithMoneyTest {
     }
 
     @Test
-    public void kataExample() {
-        Money fiveHundredMoney = new Money();
-        fiveHundredMoney.setMoneyAmount(500);
-        Money hundredMoney = new Money();
-        hundredMoney.setMoneyAmount(100);
+    public void kataExample() throws Exception {
+        Money fiveHundredMoney = new Money(500);
+        Money hundredMoney = new Money(100);
 
         AccountWithMoney accountWithMoney = new AccountWithMoney();
         accountWithMoney.deposit(fiveHundredMoney);
@@ -39,45 +34,44 @@ class AccountWithMoneyTest {
     }
 
     @Test
-    public void withDrawShouldWordCorrectly() {
-        Money money = new Money();
-        money.setMoneyAmount(100);
-        Money otherMoney = new Money();
-        otherMoney.setMoneyAmount(100);
+    public void withDrawShouldWordCorrectly() throws Exception {
+        Money money = new Money(100);
+        Money otherMoney = new Money(100);
 
         AccountWithMoney accountWithMoney = new AccountWithMoney();
         accountWithMoney.deposit(money);
 
         accountWithMoney.withDraw(otherMoney);
 
-        Money expectedMoney = new Money();
-        expectedMoney.setMoneyAmount(0);
+        Money expectedMoney = new Money(0);
 
         assertEquals(accountWithMoney.getMoneyStored().getMoneyAmount(), expectedMoney.getMoneyAmount());
     }
 
     @Test
     public void withDrawWithoutAvailableResourceShouldNotBeDone() {
-        Money money = new Money();
-        money.setMoneyAmount(100);
-        Money otherMoney = new Money();
-        otherMoney.setMoneyAmount(200);
+        Money money = new Money(100);
+        Money otherMoney = new Money(200);
+
 
         AccountWithMoney accountWithMoney = new AccountWithMoney();
         accountWithMoney.deposit(money);
 
-        accountWithMoney.withDraw(otherMoney);
+        Exception exception = assertThrows(Exception.class, () -> {
+            accountWithMoney.withDraw(otherMoney);
+        });
+        String expectedMessage = "Insuficient amount in Account";
 
-        Money expectedMoney = new Money();
-        expectedMoney.setMoneyAmount(100);
+        Money expectedMoney = new Money(100);
 
         assertEquals(accountWithMoney.getMoneyStored().getMoneyAmount(), expectedMoney.getMoneyAmount());
+        assertTrue(exception.getMessage().contains(expectedMessage));
+
     }
 
     @Test
     public void getMoneyStoredCorrectly() {
-        Money money = new Money();
-        money.setMoneyAmount(100);
+        Money money = new Money(100);
 
         AccountWithMoney accountWithMoney = new AccountWithMoney();
         accountWithMoney.deposit(money);

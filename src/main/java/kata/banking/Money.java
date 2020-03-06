@@ -1,28 +1,20 @@
 package kata.banking;
 
 public class Money {
-    private int amount;
+    private final int amount;
+
+    public Money(int amount) { this.amount = amount; }
 
     Money newMoney(int amount) {
-        Money money = new Money();
-        money.amount = amount;
+        Money money = new Money(amount);
         return money;
     }
 
-    public int setMoneyAmount(Integer amount){
-        return this.amount = amount;
-    }
-    public int getMoneyAmount() {
-        return amount;
-    }
+    public int getMoneyAmount() { return amount; }
 
-    public Money addMoney(Money otherMoney) {
-        return newMoney(amount + otherMoney.amount);
-    }
+    public Money addMoney(Money otherMoney) { return newMoney(amount + otherMoney.amount); }
 
-    public Money substractMoney(Money otherMoney) {
-        return newMoney(amount - otherMoney.amount);
-    }
+    public Money substractMoney(Money otherMoney) { return newMoney(amount - otherMoney.amount); }
 
     public Money multiplyMoney(Money otherMoney) {
         return newMoney(amount * otherMoney.amount);
@@ -48,8 +40,6 @@ public class Money {
         return greaterThan(otherMoney) || equal(otherMoney);
     }
 
-    private int compare(Money otherMoney) {
-        // Integer.compare(x,y) => return (x < y) ? -1 : ((x == y) ? 0 : 1);
-        return Integer.compare(amount, otherMoney.amount);
-    }
+    // Integer.compare(x,y) => return (x < y) ? -1 : ((x == y) ? 0 : 1);
+    private int compare(Money otherMoney) { return Integer.compare(amount, otherMoney.amount); }
 }
