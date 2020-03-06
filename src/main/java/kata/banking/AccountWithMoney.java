@@ -9,8 +9,7 @@ public class AccountWithMoney {
     private ArrayList<Statement> statementList = new ArrayList<>();
 
     public String printListOfStatements() {
-        StringBuilder listOfStatements = new StringBuilder();
-        listOfStatements.append("\nDate        Amount  Balance\n");
+        StringBuilder listOfStatements = new StringBuilder().append("\nDate        Amount  Balance\n");
         statementList.forEach(statement -> listOfStatements.append(statement.toString()));
         return listOfStatements.toString();
     }

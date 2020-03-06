@@ -24,7 +24,8 @@ class MoneyTest {
 
         Money moneySubstractOtherMoney = money.substractMoney(otherMoney);
 
-        assertEquals(moneySubstractOtherMoney.getMoneyAmount(), money.getMoneyAmount() - otherMoney.getMoneyAmount());
+        assertEquals(moneySubstractOtherMoney.getMoneyAmount(),
+                money.getMoneyAmount() - otherMoney.getMoneyAmount());
         assertEquals(moneySubstractOtherMoney.getMoneyAmount(), -1);
     }
 
@@ -35,7 +36,8 @@ class MoneyTest {
 
         Money moneyMultipliedByOtherMoney = money.multiplyMoney(otherMoney);
 
-        assertEquals(moneyMultipliedByOtherMoney.getMoneyAmount(), money.getMoneyAmount() * otherMoney.getMoneyAmount());
+        assertEquals(moneyMultipliedByOtherMoney.getMoneyAmount(),
+                money.getMoneyAmount() * otherMoney.getMoneyAmount());
         assertEquals(moneyMultipliedByOtherMoney.getMoneyAmount(), 2);
     }
 
